@@ -8,4 +8,5 @@
     <string name="hasil_dari_activity">Hasil dari Activity</string>
     <string name="ini_intent_explicit">Ini Intent Explicit</string>
     <string name="move_activity_with_data">Ini Intent Explicit dengan Data</string>
+    <string name="move_activity_with_object">Pindah Activity dengan Object</string>
 </resources>

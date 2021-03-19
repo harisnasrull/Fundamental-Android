@@ -31,16 +31,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
             R.id.btn_explicit_data -> {
-                val intent = Intent(this,MoveWithDataActivity::class.java)
-                intent.putExtra(MoveWithDataActivity.EXTRA_NAME,"Nasuru")
+                val intent = Intent(this, MoveWithDataActivity::class.java)
+                intent.putExtra(MoveWithDataActivity.EXTRA_NAME, "Nasuru")
+                intent.putExtra(MoveWithDataActivity.EXTRA_AGE, 21)
                 startActivity(intent)
             }
             R.id.btn_explicit_object -> {
-                val intent = Intent(this,MoveActivity::class.java)
+                val person = Person(
+                        "Nasuru",
+                        21,
+                        "harisnasrullah212@gmail.com",
+                        "Jombang"
+                )
+                val intent = Intent(this, MoveActivity::class.java)
+                intent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(intent)
             }
             R.id.btn_implicit -> {
-                val intent = Intent(this,MoveActivity::class.java)
+                val intent = Intent(this, MoveActivity::class.java)
                 startActivity(intent)
             }
             R.id.btn_result_data -> {
