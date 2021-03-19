@@ -1,6 +1,7 @@
 package com.example.intent
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -48,11 +49,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
             R.id.btn_implicit -> {
-                val intent = Intent(this, MoveActivity::class.java)
+                val phone = "081330784478"
+                val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phone"))
                 startActivity(intent)
             }
             R.id.btn_result_data -> {
-                val intent = Intent(this,MoveActivity::class.java)
+                val intent = Intent(this, MoveActivity::class.java)
                 startActivity(intent)
             }
         }
