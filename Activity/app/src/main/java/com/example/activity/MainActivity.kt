@@ -45,18 +45,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         if (v.id == R.id.btn_hasil) {
-            val inputPanjang =  editPanjang.toString().trim()
-            val inputLebar =  editLebar.toString().trim()
-            val inputTinggi =  editTinggi.toString().trim()
+            val inputPanjang = editPanjang.text.toString().trim()
+            val inputLebar = editLebar.text.toString().trim()
+            val inputTinggi = editTinggi.text.toString().trim()
 
             var isEmpty = false
 
-            if (inputPanjang.isEmpty()){
+            if (inputPanjang.isEmpty()) {
                 isEmpty = true
                 tvHasil.text = getString(R.string.error)
             }
 
-            if (inputLebar.isEmpty()){
+            if (inputLebar.isEmpty()) {
                 isEmpty = true
                 tvHasil.text = getString(R.string.error)
             }

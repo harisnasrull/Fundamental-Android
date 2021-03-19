@@ -6,8 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
+
+    private lateinit var tvHasil : TextView
+
+    companion object {
+        private const val REQUEST_CODE = 200
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +25,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val btnMoveActivityWithObject : Button = findViewById(R.id.btn_explicit_object)
         val btnDial : Button = findViewById(R.id.btn_implicit)
         val btnResultActivity : Button = findViewById(R.id.btn_result_data)
+
+        tvHasil = findViewById(R.id.tv_result)
 
         btnMoveActivity.setOnClickListener(this)
         btnMoveActivityWithData.setOnClickListener(this)
@@ -44,7 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         "harisnasrullah212@gmail.com",
                         "Jombang"
                 )
-                val intent = Intent(this, MoveActivity::class.java)
+                val intent = Intent(this, MoveWithObjectActivity::class.java)
                 intent.putExtra(MoveWithObjectActivity.EXTRA_PERSON, person)
                 startActivity(intent)
             }
@@ -54,8 +64,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 startActivity(intent)
             }
             R.id.btn_result_data -> {
-                val intent = Intent(this, MoveActivity::class.java)
-                startActivity(intent)
+                val intent = Intent(this, MoveWithResultActivity::class.java)
+                startActivityForResult(intent, REQUEST_CODE)
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQUEST_CODE) {
+            if (resultCode == MoveWithResultActivity.RESULT_CODE) {
+                val selectedNumber = data?.getIntExtra(MoveWithResultActivity.EXTRA_VALUE,0)
+                val text = "Hasil : $selectedNumber"
+                tvHasil.text = text
             }
         }
     }

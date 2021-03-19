@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.intent">
+    package="com.example.activity">
 
     <application
         android:allowBackup="true"
@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Intent">
+        <activity android:name=".MoveWithResultActivity"></activity>
         <activity android:name=".MoveWithObjectActivity" />
         <activity android:name=".MoveWithDataActivity" />
         <activity android:name=".MoveActivity" />

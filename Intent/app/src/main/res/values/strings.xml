@@ -9,4 +9,9 @@
     <string name="ini_intent_explicit">Ini Intent Explicit</string>
     <string name="move_activity_with_data">Ini Intent Explicit dengan Data</string>
     <string name="move_activity_with_object">Pindah Activity dengan Object</string>
+    <string name="pilih_angka">Pilih Angka</string>
+    <string name="_50">50</string>
+    <string name="_75">75</string>
+    <string name="_100">100</string>
+    <string name="_125">125</string>
 </resources>
