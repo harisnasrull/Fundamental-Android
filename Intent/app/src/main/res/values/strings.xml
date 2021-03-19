@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Intent</string>
+    <string name="pindah_acitivity">Pindah Acitivity</string>
+    <string name="pindah_acitivity_data">Pindah Activity Dengan Data</string>
+    <string name="pindah_acitivity_object">Pindah Activity Dengan Object</string>
+    <string name="dial">Dial</string>
+    <string name="pindah_acitivity_result">Pindah Activity Dengan Result Data</string>
+    <string name="hasil_dari_activity">Hasil dari Activity</string>
+    <string name="ini_intent_explicit">Ini Intent Explicit</string>
+    <string name="move_activity_with_data">Ini Intent Explicit dengan Data</string>
+</resources>

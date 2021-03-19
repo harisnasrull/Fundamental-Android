@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_explicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pindah_acitivity"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/btn_explicit_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pindah_acitivity_data"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/btn_explicit_object"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pindah_acitivity_object"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/btn_implicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dial"
+        android:layout_marginTop="12dp"/>
+    <Button
+        android:id="@+id/btn_result_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pindah_acitivity_result"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/hasil_dari_activity"
+        android:textSize="24sp"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>
