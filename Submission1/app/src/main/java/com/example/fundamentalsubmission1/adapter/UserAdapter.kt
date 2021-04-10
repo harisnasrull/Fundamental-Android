@@ -1,4 +1,4 @@
-package com.example.fundamentalsubmission1
+package com.example.fundamentalsubmission1.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,6 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.fundamentalsubmission1.DetailUserActivity
+import com.example.fundamentalsubmission1.R
+import com.example.fundamentalsubmission1.model.User
 import kotlinx.android.synthetic.main.user_layout.view.*
 
 class UserAdapter(private var list: ArrayList<User>) : RecyclerView.Adapter<UserAdapter.VH>(){
@@ -28,8 +31,8 @@ class UserAdapter(private var list: ArrayList<User>) : RecyclerView.Adapter<User
                 tv_name.text = data.name
                 tv_username.text = data.username
                 setOnClickListener {
-                    val intent = Intent(context, DetailUser::class.java)
-                    intent.putExtra(DetailUser.EXTRA_USER, data)
+                    val intent = Intent(context, DetailUserActivity::class.java)
+                    intent.putExtra(DetailUserActivity.EXTRA_USER, data)
                     context.startActivity(intent)
                 }
             }

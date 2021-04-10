@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Fundamental Submission 2</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="detail_image">Detail Image</string>
+    <string name="repository">Repository</string>
+    <string name="location">Location</string>
+    <string name="company">Company</string>
+    <string name="followers_text">Followers</string>
+    <string name="following_text">Following</string>
+    <string name="followers">99999</string>
+    <string name="following">99999</string>
+</resources>

@@ -1,4 +1,7 @@
-package com.example.fundamentalsubmission1
+package com.example.fundamentalsubmission1.data
+
+import com.example.fundamentalsubmission1.R
+import com.example.fundamentalsubmission1.model.User
 
 class UserData {
     companion object{

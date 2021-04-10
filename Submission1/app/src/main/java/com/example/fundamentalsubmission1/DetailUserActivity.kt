@@ -3,9 +3,10 @@ package com.example.fundamentalsubmission1
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
+import com.example.fundamentalsubmission1.model.User
 import kotlinx.android.synthetic.main.activity_detail_user.*
 
-class DetailUser : AppCompatActivity() {
+class DetailUserActivity : AppCompatActivity() {
 
     companion object{
         const val EXTRA_USER = "extra_user"
