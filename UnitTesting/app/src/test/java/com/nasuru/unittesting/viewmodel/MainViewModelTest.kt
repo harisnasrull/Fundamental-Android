@@ -17,6 +17,8 @@ class MainViewModelTest {
     private val dummyHeight = 6.0
 
     private val dummyVolume = 504.0
+    private val dummyCircumference = 100.0
+    private val dummySurfaceArea = 396.0
 
     @Before
     fun before() {
@@ -26,10 +28,20 @@ class MainViewModelTest {
 
     @Test
     fun getCircumference() {
+        cuboidModel = CuboidModel()
+        mainViewModel = MainViewModel(cuboidModel)
+        mainViewModel.save(dummyLength, dummyWidth, dummyHeight)
+        val circumference = mainViewModel.getCircumference()
+        assertEquals(dummyCircumference, circumference, 0.0001)
     }
 
     @Test
     fun getSurfaceArea() {
+        cuboidModel = CuboidModel()
+        mainViewModel = MainViewModel(cuboidModel)
+        mainViewModel.save(dummyLength, dummyWidth, dummyHeight)
+        val surfaceArea = mainViewModel.getSurfaceArea()
+        assertEquals(dummySurfaceArea, surfaceArea, 0.0001)
     }
 
     @Test
