@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.nasuru.debugging.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         names.add("Kevin")
         names.add("Y000oza")
 
-        binding.imgPreview.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.fronalpstock_big))
+//        binding.imgPreview.setImageDrawable(ContextCompat.getDrawable(this,R.drawable.fronalpstock_big))
+        Glide.with(this).load(R.drawable.fronalpstock_big).into(binding.imgPreview)
     }
 
     override fun onClick(view: View) {
