@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (view.id == binding.btnSetValue.id) {
             Log.d("MainActivity", names.toString())
             val name = StringBuilder()
-            for (i in 0..3) {
+            for (i in 0..2) {
                 name.append(names[i]).append("\n")
             }
             binding.tvSet.text = name.toString()
