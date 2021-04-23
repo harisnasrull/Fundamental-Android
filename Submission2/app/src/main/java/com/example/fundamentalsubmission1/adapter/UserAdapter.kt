@@ -29,7 +29,6 @@ class UserAdapter(private var list: ArrayList<User>) : RecyclerView.Adapter<User
             with(itemView){
                 Glide.with(this).load(data.avatar).into(img_user)
                 tv_name.text = data.name
-                tv_username.text = data.username
                 setOnClickListener {
                     val intent = Intent(context, DetailUserActivity::class.java)
                     intent.putExtra(DetailUserActivity.EXTRA_USER, data)

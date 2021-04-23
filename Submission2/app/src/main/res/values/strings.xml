@@ -10,4 +10,5 @@
     <string name="following_text">Following</string>
     <string name="followers">99999</string>
     <string name="following">99999</string>
+    <string name="cari_username">Cari Username</string>
 </resources>
